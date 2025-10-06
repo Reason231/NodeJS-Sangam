@@ -1,0 +1,15 @@
+{
+  "name": "5.expressjs",
+  "version": "1.0.0",
+  "description": "Tut video => -1:39:40 - 2:13:14",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "9.book-store-api-project",
+  "version": "1.0.0",
+  "description": "= The API are tested in \"Postman\"\r - Tut video => 03:40:25 - 04:32:35",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.0"
+  }
+}

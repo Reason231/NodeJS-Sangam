@@ -1,0 +1,16 @@
+{
+  "name": "8.-mongodb-and-mongoose-basics",
+  "version": "1.0.0",
+  "description": "- \r - Tut video => 02:59:05 - 03:40:25",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.0"
+  }
+}

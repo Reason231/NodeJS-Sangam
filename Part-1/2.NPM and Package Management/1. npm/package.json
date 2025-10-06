@@ -1,0 +1,16 @@
+{
+  "name": "2.npm-and-package-management",
+  "version": "1.0.0",
+  "description": "- npm (Node Package Manager) is the world's largest software registry and the default package manager for the Node.js JavaScript runtime environment.\r - It provides a Command Line Interface (CLI) tool, a public npm registry for hosting and distributing millions of open-source packages, and a website for developers to search for and share code\r - To install => npm init \r Tut video =>  30:24 -",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "lodash": "^4.17.21"
+  }
+}
