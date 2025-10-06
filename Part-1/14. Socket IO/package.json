@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "name": "14.-socket-io",
+  "version": "1.0.0",
+  "description": "- npm i socket.io\r - Tut video => 8:15:38 - 8:53:14",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

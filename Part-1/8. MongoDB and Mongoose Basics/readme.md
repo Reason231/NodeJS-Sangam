@@ -18,3 +18,4 @@
 - copy the connection code and paste in the vsCode
 - It will be like this => 
 mongodb+srv://devilineye100_db_user:<db_password>@cluster0.k0lhymn.mongodb.net/
+- Connection => mongodb+srv://devilineye100_db_user:dGjqbL7bWvxcNBwe@cluster0.k0lhymn.mongodb.net/

@@ -1,0 +1,19 @@
+{
+  "name": "13.-intermediate-mongodb-and-aggregation",
+  "version": "1.0.0",
+  "description": "1. Understanding the aggregation pipeline\r 2. Using common aggregation operators\r 3. Understanding document reference\r 4. Populating referenced documents.\r - Tut video => 07:26:03 - 08:15:38",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "dev":"nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.0"
+  }
+}
