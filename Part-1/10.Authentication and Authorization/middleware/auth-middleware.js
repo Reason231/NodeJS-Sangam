@@ -6,7 +6,6 @@ const jwt = require("jsonwebtoken");
 // When the user refreshes the page, it checks if it's authorized. it is used in "home-routes.js"
 const authMiddleware = (req, res, next) => {
   try {
-    console.log("Middleware called")
     // There are two patterns for sending JWT Token
     // 1. Header/ Bearer Token  2. Cookie/HttpOnly Cookie
 

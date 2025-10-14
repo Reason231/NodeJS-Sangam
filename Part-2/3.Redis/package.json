@@ -1,0 +1,17 @@
+{
+  "name": "3.redis",
+  "version": "1.0.0",
+  "description": "- Go to the link => https://github.com/tporadowski/redis/releases\r - Download the \"msi\" version\r - Install it\r - Go to C: -> program file -> Redis -> Copy the location path.\r C:\\Program Files\\Redis\r - Go to \"control-panel\" -> \"User a/c\" -> \"User a/c\" -> Change my environment variable ->  Double click on \"path\" -> \"Click on new\" -> Paste the above location path.\r [!Alt](./1.png)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ioredis": "^5.8.1",
+    "redis": "^5.8.3"
+  }
+}

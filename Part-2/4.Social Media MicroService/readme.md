@@ -1,0 +1,92 @@
+## Microservice architecture
+- Note: We have used the "joi" for the validation.
+- Each functionality is divided into the folders
+- Tut video => 02:56:54 - 08:50:15
+
+## Difference between Monolithic app structure and Microservice structure
+
+1. Monolithic app structure (Mono-repo -> all services in one repo)
+A monolithic backend typically has one big codebase:
+
+/server
+ ├── controllers/
+ ├── routes/
+ ├── models/
+ ├── utils/
+ ├── middlewares/
+ ├── config/
+ └── app.js
+
+- All logic (auth, payment, products, users, etc.) lives together in a single app.
+- If one part breaks or needs scaling, the whole app must be redeployed.
+
+2. Microservice app structure (Multi-repo -> each services in its own repo)
+- In microservices, you split your app into independent services.
+- Each service focuses on a specific domain (auth, products, orders, etc.) and can run, scale, and deploy separately.
+
+Example:
+
+/microservices
+ ├── auth-service/
+ │    ├── src/
+ │    │    ├── controllers/
+ │    │    ├── routes/
+ │    │    ├── models/
+ │    │    ├── utils/
+ │    │    └── app.js
+ │    ├── package.json
+ │    └── Dockerfile
+ │
+ ├── product-service/
+ │    ├── src/
+ │    │    ├── controllers/
+ │    │    ├── routes/
+ │    │    ├── models/
+ │    │    └── app.js
+ │    ├── package.json
+ │    └── Dockerfile
+ │
+ ├── media-service/
+ │    ├── src/
+ │    │    ├── controllers/
+ │    │    ├── routes/
+ │    │    ├── models/
+ │    │    └── app.js
+ │    ├── package.json
+ │    └── Dockerfile
+ │
+ ├── api-gateway/
+ │    ├── src/
+ │    ├── package.json
+ │    └── Dockerfile
+ │
+ └── docker-compose.yml
+
+
+ ## Notes for all folders
+ - Each file has its own "package.json" with their need of npm modules. 
+ - Read the "readme.md" file for the setup of own folder.
+ - The code is written first at "auth-service" after that some of the files code is copied to another services like in the api-gateway.
+ - api-gateway folder runs on PORT "3000"
+ - auth-service folder runs on PORT "3001"
+ - post(CRUD) runs on PORT "3002"
+
+## Steps
+ 1. Create api-gateway which is the initial point.
+ (Tut video => 2:56:54 - 3:10:30 & 4:19:53 - )
+
+ 2. Create auth-service and write the code here first
+ (Tut video => 3:10:30- 4:19:53 & )
+
+ 3. 
+
+
+ ## Database 
+ UserName -> devilineye100_db_user
+ Password -> shAoPhh2zzkQ9lyR
+ Connection URL -> mongodb+srv://devilineye100_db_user:shAoPhh2zzkQ9lyR@microservice.hs2ssev.mongodb.net/
+
+
+
+ ## Tut video
+ 4:24:49

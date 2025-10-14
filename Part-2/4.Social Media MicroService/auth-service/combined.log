@@ -1,0 +1,100 @@
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:38:29.317Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:38:30.534Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:39:45.968Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:39:46.952Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:39:49.287Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:39:50.818Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:39:51.902Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:39:53.560Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:39:54.555Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:41:59.998Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:42:01.185Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:42:04.383Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:42:06.897Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:42:07.828Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:42:30.169Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:42:31.161Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:42:32.119Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:42:32.120Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:42:32.124Z"}
+{"0":"\"","1":"u","10":" ","11":"i","12":"s","13":" ","14":"r","15":"e","16":"q","17":"u","18":"i","19":"r","2":"s","20":"e","21":"d","3":"e","4":"r","5":"n","6":"a","7":"m","8":"e","9":"\"","level":"warn","message":"Validation error","service":"auth-service","timestamp":"2025-10-13T16:42:32.128Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:42:38.448Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:42:38.448Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:42:38.449Z"}
+{"0":"\"","1":"p","10":" ","11":"l","12":"e","13":"n","14":"g","15":"t","16":"h","17":" ","18":"m","19":"u","2":"a","20":"s","21":"t","22":" ","23":"b","24":"e","25":" ","26":"a","27":"t","28":" ","29":"l","3":"s","30":"e","31":"a","32":"s","33":"t","34":" ","35":"6","36":" ","37":"c","38":"h","39":"a","4":"s","40":"r","41":"a","42":"c","43":"t","44":"e","45":"r","46":"s","47":" ","48":"l","49":"o","5":"w","50":"n","51":"g","6":"o","7":"r","8":"d","9":"\"","level":"warn","message":"Validation error","service":"auth-service","timestamp":"2025-10-13T16:42:38.451Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:42:45.842Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:42:45.843Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:42:45.845Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-10-13T16:42:45.942Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:43:42.230Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:43:42.230Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:43:42.231Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-10-13T16:43:42.330Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:44:05.199Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:44:06.151Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:44:08.276Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:44:09.579Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:44:10.869Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:44:11.825Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:44:15.410Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:44:15.410Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:44:15.414Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-10-13T16:44:15.525Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:44:28.758Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:44:29.720Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:44:30.887Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:44:30.887Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:44:30.891Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-10-13T16:44:30.988Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:45:00.614Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:45:01.590Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:45:04.961Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:45:04.962Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:45:04.966Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-10-13T16:45:05.068Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:45:34.496Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:45:34.497Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:45:34.498Z"}
+{"level":"warn","message":"User already exists","service":"auth-service","timestamp":"2025-10-13T16:45:34.595Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:46:23.640Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:46:24.668Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:46:32.903Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:46:32.903Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:46:32.908Z"}
+{"level":"error","message":"Registration error occurred Assignment to constant variable.","service":"auth-service","stack":"TypeError: Assignment to constant variable.\n    at registerUser (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\auth-service\\src\\controllers\\auth-controller.js:40:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-13T16:46:33.019Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:46:58.136Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:46:59.133Z"}
+{"level":"info","message":"Received POST request to /api/auth/register","service":"auth-service","timestamp":"2025-10-13T16:47:05.498Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-13T16:47:05.498Z"}
+{"level":"info","message":"Registration endpoint hit.....","service":"auth-service","timestamp":"2025-10-13T16:47:05.502Z"}
+{"buffer":{"data":[104,237,45,9,188,167,91,250,38,169,1,177],"type":"Buffer"},"level":"warn","message":"User saved successfully","service":"auth-service","timestamp":"2025-10-13T16:47:05.748Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:36.829Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:37.637Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:39.289Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:40.066Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:40.846Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:47:41.830Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:43.801Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:47:44.733Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:47:45.848Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:47:46.810Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:11.724Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:48:12.705Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:13.499Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:48:14.479Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:16.763Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:48:17.731Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:19.367Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:20.440Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:48:21.413Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:22.365Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:23.650Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:48:24.598Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:48:29.901Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:48:30.869Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:53:58.489Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:53:59.680Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T16:54:02.065Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T16:54:03.049Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-13T17:28:57.842Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-13T17:28:58.827Z"}

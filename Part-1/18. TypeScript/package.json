@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "@types/node": "^24.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "name": "18.-typescript",
+  "version": "1.0.0",
+  "description": "Note: It doesn't cover all the parts of typeScript. It just shows how to connect TypeScript with nodeJS.\r - \r - Tut video => 10:09:50 - 11:06:04s\r - npm i typescript @types/node ts-node --save-dev",
+  "main": "index.js",
+  "scripts": {
+    "build":"tsc", 
+    "start":"node dist/app.js",
+    "dev":"ts-node src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

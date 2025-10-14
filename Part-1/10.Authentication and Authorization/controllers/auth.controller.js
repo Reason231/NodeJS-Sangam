@@ -13,7 +13,8 @@ const registerUser = async (req, res) => {
       $or: [{username}, {email}],
     });
     if (checkExistingUser) {
-      return res.status(400).json({
+      // 409 -> conflict
+      return res.status(409).json({
         success: false,
         message:
           "User is already exists either with same username or same email. Please try with a different username or email",
@@ -63,6 +64,7 @@ const loginUser = async (req, res) => {
     const checkUser = await User.findOne({ username }) || await User.findOne({email});
 
     if (!checkUser) {
+      // 404 -> Not found 
       return res.status(400).json({
         success: false,
         message: "User doesn't exists with this userName",
@@ -74,7 +76,8 @@ const loginUser = async (req, res) => {
     const isPasswordMatch = await bcrypt.compare(password, checkUser.password);
 
     if (!isPasswordMatch) {
-      return res.status(400).json({
+      // 401 -> Unauthorized user  
+      return res.status(401).json({
         success: false,
         message: "Password Incorrect",
       });
@@ -132,7 +135,7 @@ const changePassword = async (req, res) => {
     const isPasswordMatch = await bcrypt.compare(oldPassword, user.password);
 
     if (!isPasswordMatch) {
-      return res.status(400).json({
+      return res.status(401).json({
         success: false,
         message: "Old password is incorrect! Please try again",
       });

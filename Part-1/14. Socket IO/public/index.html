@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div id="user-list">
+      <h3>Online User</h3>
+      <ul id="users"></ul>
+    </div>
+
+    <!-- chat container -->
+    <div id="chat"></div>
+
+    <form action="" id="message-form">
+      <input
+        type="text"
+        id="message-input"
+        placeholder="Enter your message"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+
+
+    <!-- src is provided automatically by the socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      const socket = io();
+      const chat = document.getElementById("chat");
+      const usersList = document.getElementById("users");
+      const messageForm = document.getElementById("message-form");
+      const messageInput = document.getElementById("message-input");
+
+      // when the user enters in the chat
+      const userName = prompt("Enter your username");
+
+
+      // Sent Data from client
+      // (i) when you emit here from client, the server socket is on i.e. socket.on()
+      socket.emit("join", userName); // which user is joining in the chat
+
+      
+      // Received data from server
+      // (ii) inform to all client/users(index.html) that a new user has joined in the chat,
+      socket.on("userJoined", (user) => {
+        addMessage(`${user} has joined the chat`);  
+      });
+
+      // Received data from server
+      // (iii) inform to clients that how many online people are there
+      socket.on("userList", (users) => {
+        usersList.innerHTML = users.map((user) => `<li>${user}</li>`).join("");
+      });
+
+     
+    // // Data received from server
+    // (v) inform to all users that someone has messaged
+    socket.on("chatMessage",(message)=>{
+      addMessage(`${message.userName}: ${message.text}`)
+    })
+
+     // Data sent by server
+    // (vi) handle user disconnection
+    socket.on('userLeft',(user)=>{
+      addMessage(`${user} has left the chat`)
+    })
+
+    //   handle form submission
+    messageForm.addEventListener("submit",(e)=>{
+        e.preventDefault();
+
+        const extractMessageText=messageInput.value.trim()
+        if(extractMessageText){
+            // (iv) handle incoming chat message
+            // Data sent to server
+            socket.emit("chatMessage",{
+                userName,text:extractMessageText
+            })
+
+            messageInput.value = ""
+        }
+    })
+
+      function addMessage(input) {
+        // add message to the chat container that user has joined
+        const messageElement = document.createElement("div");
+        messageElement.textContent = input;
+        chat.appendChild(messageElement);
+
+        // scroll to the bottom of the chat container
+        chat.scrollTop = chat.scrollHeight;
+      }
+    </script>
+  </body>
+</html>
