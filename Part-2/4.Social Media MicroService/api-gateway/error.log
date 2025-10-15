@@ -1,0 +1,5 @@
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-14T16:38:14.037Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-14T16:41:51.084Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-14T16:42:18.722Z"}
+{"level":"error","message":"Proxy error: ","service":"api-gateway","timestamp":"2025-10-14T16:42:48.995Z"}
+{"code":"ECONNREFUSED","level":"error","message":"","name":"AggregateError","originalUrl":"/v1/auth/register","service":"api-gateway","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1139:18)\n    at afterConnectMultiple (node:net:1712:7)","timestamp":"2025-10-14T16:43:54.428Z"}

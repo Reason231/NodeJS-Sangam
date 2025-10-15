@@ -1,6 +1,7 @@
 ## Note
 - All other services, will be run through the api-gateway like it's the main door.
 - It targets individual proxy which target individuals services. 
+- Run the "auth-service" while running the "api-gateway"
 
 ## Steps for api-gateway folder
 1. Open the terminal of this folder

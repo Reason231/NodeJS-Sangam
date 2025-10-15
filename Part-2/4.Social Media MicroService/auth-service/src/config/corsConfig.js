@@ -8,7 +8,7 @@ const configureCors = () => {
     origin: (origin, callback) => {
       const allowedOrigins = [
         // urls that will be allowed for accessing
-        "http://locahost:3000", // local dev
+        "http://locahost:3001", // local dev
         "https://yourcustomdomain.com", // production domain
       ];
 

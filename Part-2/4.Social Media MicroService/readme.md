@@ -64,21 +64,23 @@ Example:
 
 
  ## Notes for all folders
- - Each file has its own "package.json" with their need of npm modules. 
- - Read the "readme.md" file for the setup of own folder.
- - The code is written first at "auth-service" after that some of the files code is copied to another services like in the api-gateway.
- - api-gateway folder runs on PORT "3000"
- - auth-service folder runs on PORT "3001"
- - post(CRUD) runs on PORT "3002"
+- [!Alt](./Code-flow.png) => Code flow explanation from (Tut video => 5:10:26 - 5:15:30 )
+- Each file has its own "package.json" with their need of npm modules. 
+- Read the "readme.md" file for the setup of own folder.
+- The code is written first at "auth-service" after that some of the files code is copied to another services like in the api-gateway.
+- api-gateway folder runs on PORT "3000"
+- auth-service folder runs on PORT "3001"
+- post(CRUD) runs on PORT "3002"
 
 ## Steps
- 1. Create api-gateway which is the initial point.
- (Tut video => 2:56:54 - 3:10:30 & 4:19:53 - )
+ 1. Create api-gateway which is the initial point and write the code here second.
+ (Tut video => 2:56:54 - 3:10:30 & 4:19:53 - 4:47:24)
 
  2. Create auth-service and write the code here first
- (Tut video => 3:10:30- 4:19:53 & )
+ (Tut video => 3:10:30 - 4:19:53 & 4:47:24 - 5:06:44)
 
- 3. 
+ 3. Create post-server for CRUD
+ (Tut video => 5:15:30 - )
 
 
  ## Database 

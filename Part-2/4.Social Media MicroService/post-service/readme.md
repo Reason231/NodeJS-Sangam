@@ -1,0 +1,1 @@
+npm i cors dotenv expresss mongoose helmet jsonwebtoken winston ioredis

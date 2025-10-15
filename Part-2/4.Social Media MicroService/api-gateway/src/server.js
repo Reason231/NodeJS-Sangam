@@ -3,6 +3,7 @@ const express=require('express')
 const Redis=require('ioredis')
 const helmet=require('helmet')
 const { configureCors } = require('./config/corsConfig')
+const cors=require("cors")
 const {rateLimit}=require('express-rate-limit')
 const {RedisStore}=require("rate-limit-redis")
 const logger=require('./utils/logger')
@@ -58,7 +59,17 @@ const proxyOptions={
 
     // proxy error handler
     proxyErrorHandler:(err,res,next)=>{
-        logger.error(`Proxy error: ${err.message}`)
+        // logger.error(`Proxy error: ${err.message}`)
+      const errDetails = {
+      name: err.name,
+      message: err.message,
+      code: err.code,
+      stack: err.stack,
+      originalUrl: res && res.req && res.req.originalUrl, // may or may not be present
+    };
+    logger.error('Proxy encountered an error', errDetails);
+    console.error('Proxy error details:', errDetails);
+
         res.status(500).json({
             message:"Internal server error",
             error:err.message
@@ -69,6 +80,7 @@ const proxyOptions={
 // setting up proxy for "auth-service"
 // It will target /api/auth/ by changing /v1/ to /api/
 // It will also target "localhost:3001" port
+// Run => http://localhost:300/v1/auth/register
 app.use('/v1/auth',proxy(process.env.AUTH_SERVICE_URL,{
     ...proxyOptions,   // above function
     proxyReqOptDecorator:(proxyReqOpts,srcReq)=>{

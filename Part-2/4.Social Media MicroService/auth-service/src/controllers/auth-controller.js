@@ -5,7 +5,7 @@ const logger=require('../utils/logger')
 const { validateRegistration, validatelogin } = require('../utils/validation')
 
 
-// user registration
+// ## user registration
 const registerUser=async(req,res)=>{
     // 0. gives info that user has entered the registered route
     logger.info("Registration endpoint hit.....")  
@@ -45,7 +45,7 @@ const registerUser=async(req,res)=>{
 
 
         // 4. sends the userData for the refreshToken to "generateToken.js" file
-        // destructure the accessToken and refreshToken
+        // getting the accessToken and refreshToken
         const {accessToken,refreshToken}=await generateTokens(user)
 
         // 5. sends the response after all steps are completed successfully
@@ -66,7 +66,7 @@ const registerUser=async(req,res)=>{
     }
 }
     
-// user login
+// ## user login
 const loginUser=async(req,res)=>{
 
     // 0. Gives info that user has entered the registered route
@@ -107,6 +107,7 @@ const loginUser=async(req,res)=>{
         }
 
         // 4. sends the userData for the refreshToken to "generateToken.js" file
+        // getting the accessToken and refreshToken
         const {accessToken,refreshToken}=await generateTokens(user)
 
         // 5. sends the response after all steps are completed successfully
@@ -129,9 +130,14 @@ const loginUser=async(req,res)=>{
 
 // refresh token
 // Need the refresh token for logout
+// Its function is to verifies a user’s refresh token and, if it’s valid, issues a new access token and a new refresh token.
+// It renews the user’s session without forcing them to log in again.
+// It replaces the old refresh token with a new one (for security reasons).
 const refreshTokenUser=async(req,res)=>{
     logger.info("Refresh token endpoint hit.....")
     try{
+
+        // 1. extracts refresh token from request body
         const {refreshToken}=req.body
         if(!refreshToken){
             logger.warn("Refresh token missing")
@@ -141,10 +147,10 @@ const refreshTokenUser=async(req,res)=>{
             })
         }
 
+        // 2. The backend checks if the token exists in the RefreshToken collection
         const storedToken=await RefreshToken.findOne({token:refreshToken})
 
         // const storedToken=await RefreshToken.deleteOne({token:refreshToken})
-
         if(!storedToken){
             logger.warn("Invalid refresh token provided")
             return res.status(400).json({
@@ -152,7 +158,9 @@ const refreshTokenUser=async(req,res)=>{
                 message:"Invalid refresh token"
             })
         }
+
     
+        // 3. Checks if the token is expired
         if(!storedToken || storedToken.expiresAt < new Date()){
             logger.warn("Invalid or expired refresh token")
 
@@ -162,9 +170,11 @@ const refreshTokenUser=async(req,res)=>{
             })
         }
 
-        // finds the user by Id
+        // 4. Finds the user linked to the token
         const user=await User.findById(storedToken.user)
-
+        
+        // Each refresh token is linked to a specific user.
+        // If the user no longer exists, it returns an error.
         if(!user){
             logger.warn("User not found")
 
@@ -174,10 +184,10 @@ const refreshTokenUser=async(req,res)=>{
             })
         }
 
-
+        // 5. Generates new tokens
         const {accessToken:newAccessToken,refreshToken:newRefreshToken}=await generateTokens(user)
 
-        // delete the old refresh token
+        // 6. deletes the old refresh token
         await RefreshToken.deleteOne({_id:storedToken._id})
 
         res.json({
@@ -195,7 +205,6 @@ const refreshTokenUser=async(req,res)=>{
     }
 }
 
-// change password
 
 // logout
 const logoutUser=async(req,res)=>{
