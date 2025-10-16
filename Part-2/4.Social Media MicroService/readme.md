@@ -89,6 +89,3 @@ Example:
  Connection URL -> mongodb+srv://devilineye100_db_user:shAoPhh2zzkQ9lyR@microservice.hs2ssev.mongodb.net/
 
 
-
- ## Tut video
- 4:24:49
