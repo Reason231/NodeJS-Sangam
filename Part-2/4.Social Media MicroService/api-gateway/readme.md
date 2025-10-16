@@ -13,6 +13,16 @@
 
 
 ## Steps for code
+Below steps are from video (4:19:53 - 4:47:24)
 1. Go to "utils" folder and create "logger.js" and copy and paste the code from "auth-service" folder.
 2. Go to "middleware" folder and create  "errorHandler.js" and copy and paste the code from "auth-service" folder.
 3. Go to "server.js"
+
+Below steps are from video (5:46:40 - )
+1. Go to "middleware" folder and create "authMiddleware.js" 
+
+## Tut video timestamp
+- Setup => 2:56:54 - 3:10:30 &
+- Auth-service proxy implementation in api-gateway 4:19:53 - 4:47:24 & 
+- Post-service proxy implementation in api-gateway 5:46:40 - 
+

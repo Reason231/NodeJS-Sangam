@@ -95,6 +95,10 @@ app.use('/v1/auth',proxy(process.env.AUTH_SERVICE_URL,{
 }))
 
 
+// setting up proxy for "post-service"
+
+
+
 app.use(errorHandler)
 
 app.listen(PORT,()=>{

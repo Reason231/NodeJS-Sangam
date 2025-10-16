@@ -38,13 +38,13 @@ app.use((req,res,next)=>{
 
 
 // DDos protection and rate limiting
+// Global DDos Protection -> This is a global rate limiter — it protects your entire service from being overloaded by too many requests per second from the same IP (a common symptom of DDoS or brute-force attacks).
 const rateLimiter=new RateLimiterRedis({
     storeClient:redisClient,   // redisClient is created above
     keyPrefix:"middleware",
     points:10,                // 10 requests
     duration:1                // in 1 second
 })
-
 
 app.use((req,res,next)=>{
     // if the req is less than 10, it will go to next function, else catch.
@@ -55,6 +55,7 @@ app.use((req,res,next)=>{
         res.status(429).json({success:false,message:"Too many requests"})
     })
 })
+
 
 
 // IP based rate limiting for sensitive endpoints
