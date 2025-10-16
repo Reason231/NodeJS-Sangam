@@ -7,6 +7,7 @@ const helmet=require('helmet')
 const { RateLimiterRedis } = require('rate-limiter-flexible');
 const { rateLimit } = require('express-rate-limit');
 const { RedisStore } = require('rate-limit-redis');
+
 const postRoutes=require('./routes/post-routes')
 const errorHandler=require('./middleware/errorHandler')
 const logger=require('./utils/logger')
@@ -79,7 +80,7 @@ app.use('/api/posts',sensitiveEndPointsLimiter)  // if you do multiple requests,
 
 
 //routes -> pass redisClient to routes
-// Gives controller access to Redis
+// Gives controller access to Redise
 app.use(
   "/api/posts",
   (req, res, next) => {
@@ -89,8 +90,8 @@ app.use(
   postRoutes
 );
 
-// // Main routes
-// app.use('/api/auth',routes)
+// Main routes
+app.use('/api/posts',postRoutes)
 
 app.use(errorHandler);
 

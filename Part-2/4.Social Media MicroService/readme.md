@@ -73,14 +73,25 @@ Example:
 - post(CRUD) runs on PORT "3002"
 
 ## Steps
- 1. Create api-gateway which is the initial point and write the code here second.
- (Tut video => 2:56:54 - 3:10:30 & 4:19:53 - 4:47:24 & 5:46:40 - )
+ 1. Create "api-gateway" folder which is the initial point and write the code here second.
+ (Tut video => 2:56:54 - 3:10:30  )
 
- 2. Create auth-service and write the code here first
- (Tut video => 3:10:30 - 4:19:53 & 4:47:24 - 5:06:44)
+ 2. Create "auth-service" folder and write the code here first
+ (Tut video => 3:10:30 - 4:19:53 & )
 
- 3. Create post-server for CRUD
- (Tut video => 5:15:30 - 5:46:00)
+ 3. Go to "api-gateway" folder
+ - 4:19:53 - 4:47:24
+
+ 4. Go to "auth-service" folder
+ - 4:47:24 - 5:06:44
+
+ 5. Create post-server for CRUD
+ - Tut video => 5:15:30 - 5:46:00 & 5:55:14 - 
+
+ 6. Go to "api-gateway" folder
+ - 5:46:40 - 5:55:14
+
+ 7. 
 
 
  ## Database 

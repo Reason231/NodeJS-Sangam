@@ -20,6 +20,7 @@ Below steps are from video (4:19:53 - 4:47:24)
 
 Below steps are from video (5:46:40 - )
 1. Go to "middleware" folder and create "authMiddleware.js" 
+2. Go to "server.js"
 
 ## Tut video timestamp
 - Setup => 2:56:54 - 3:10:30 &

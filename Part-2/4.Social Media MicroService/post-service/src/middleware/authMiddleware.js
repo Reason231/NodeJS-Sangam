@@ -1,7 +1,7 @@
 const logger=require('../utils/logger')
 
 const authenticateRequest=(req,res,next)=>{
-    const userId=req.headers[`x-user-id`]  // getting from the api-gateway service
+    const userId=req.headers["x-user-id"]  // getting from the api-gateway service "server.js"
 
     if(!userId){
         logger.warn("Access attempted without user ID")
