@@ -28,19 +28,26 @@ cloudinary.config({
 //   });
 // };
 
-const uploadMediaToCloudinary=async(filePath)=>{
-    try{
-        const result=await cloudinary.uploader.upload(filePath)
+const uploadMediaToCloudinary=async(file)=>{
+  if(!file) throw new Error("Empty file")
 
-        // You need publicId, so that you can update or remove the image in cloudinary, it will be update/remove in the db but not in the cloudinary, so we need it.
-        return{
-            url:result.secure_url,
-            publicId:result.public_id
-        }
-    }
-    catch(e){
+    if(file.path && typeof file.path === "String"){
+      try{
+        const result=await cloudinary.uploader.upload(file.path,{
+          resource_type:"auto",
+               folder: process.env.CLOUDINARY_FOLDER || 'media-service',
+        })
+
+        // delete local file after successful upload
+     try { fs.unlinkSync(file.path); } catch (e) { /* log if needed */ }
+        return result
+      
+
+      }
+      catch(e){
         console.log("Error occur while uploading to cloudinary",e)
         throw new Error("Error while uploading to cloudinary")
+      }
     }
 }
 

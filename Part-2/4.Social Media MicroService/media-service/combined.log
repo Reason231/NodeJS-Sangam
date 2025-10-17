@@ -16,3 +16,81 @@
 {"http_code":400,"level":"error","message":"Empty file","name":"Error","service":"media-service","timestamp":"2025-10-17T10:58:54.882Z"}
 {"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:01:26.522Z"}
 {"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:01:27.518Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:01:50.307Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:01:51.331Z"}
+{"level":"info","message":"Received POST request to /api/media/upload","service":"media-service","timestamp":"2025-10-17T11:01:59.465Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-10-17T11:01:59.466Z"}
+{"level":"info","message":"Starting media upload","service":"media-service","timestamp":"2025-10-17T11:01:59.474Z"}
+{"level":"info","message":"File details: name=1.png, type=image/png","service":"media-service","timestamp":"2025-10-17T11:01:59.475Z"}
+{"level":"info","message":"Uploading to cloudinary starting...","service":"media-service","timestamp":"2025-10-17T11:01:59.476Z"}
+{"level":"error","message":"Error creating media Error while uploading to cloudinary","service":"media-service","stack":"Error: Error while uploading to cloudinary\n    at uploadMediaToCloudinary (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\src\\utils\\cloudinary.js:43:15)\n    at uploadMedia (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\src\\controllers\\media-controller.js:24:42)\n    at Layer.handleRequest (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\node_modules\\router\\lib\\layer.js:152:17)\n    at next (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\node_modules\\router\\lib\\route.js:157:13)\n    at done (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\node_modules\\multer\\lib\\make-middleware.js:59:7)\n    at indicateDone (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\node_modules\\multer\\lib\\make-middleware.js:63:68)\n    at C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\node_modules\\multer\\lib\\make-middleware.js:176:11\n    at WriteStream.<anonymous> (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\node_modules\\multer\\storage\\disk.js:43:9)\n    at WriteStream.emit (node:events:519:35)\n    at finish (node:internal/streams/writable:953:10)","timestamp":"2025-10-17T11:01:59.480Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:07:47.941Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:07:48.784Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:07:49.776Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:07:56.456Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:07:58.636Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:07:59.618Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:00.985Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:03.345Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:04.923Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:08:05.903Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:07.249Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:08:08.284Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:12.249Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:14.336Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:15.566Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:16.263Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:08:17.246Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:18.823Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:21.149Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:25.685Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:26.723Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:08:27.733Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:31.023Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:35.179Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:08:36.196Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:08:38.096Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:08:39.106Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:09:44.353Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:09:45.350Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:09:52.202Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:09:53.258Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:10.444Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:11.519Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:17.769Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:18.763Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:20.414Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:21.178Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:22.198Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:23.197Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:24.186Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:25.595Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:26.908Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:27.958Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:29.139Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:30.132Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:36.302Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:37.235Z"}
+{"level":"info","message":"Received POST request to /api/media/upload","service":"media-service","timestamp":"2025-10-17T11:10:39.601Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-10-17T11:10:39.602Z"}
+{"level":"info","message":"Starting media upload","service":"media-service","timestamp":"2025-10-17T11:10:39.614Z"}
+{"level":"info","message":"File details: name=1.png, type=image/png","service":"media-service","timestamp":"2025-10-17T11:10:39.615Z"}
+{"level":"info","message":"Uploading to cloudinary starting...","service":"media-service","timestamp":"2025-10-17T11:10:39.616Z"}
+{"level":"error","message":"Error creating media Cannot read properties of undefined (reading 'public_id')","service":"media-service","stack":"TypeError: Cannot read properties of undefined (reading 'public_id')\n    at uploadMedia (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\src\\controllers\\media-controller.js:26:78)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-17T11:10:39.616Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:10:55.589Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:10:56.953Z"}
+{"level":"info","message":"Received POST request to /api/media/upload","service":"media-service","timestamp":"2025-10-17T11:10:57.835Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-10-17T11:10:57.836Z"}
+{"level":"info","message":"Starting media upload","service":"media-service","timestamp":"2025-10-17T11:10:57.853Z"}
+{"level":"info","message":"File details: name=1.png, type=image/png","service":"media-service","timestamp":"2025-10-17T11:10:57.854Z"}
+{"level":"info","message":"Uploading to cloudinary starting...","service":"media-service","timestamp":"2025-10-17T11:10:57.855Z"}
+{"level":"error","message":"Error creating media Cannot read properties of undefined (reading 'public_id')","service":"media-service","stack":"TypeError: Cannot read properties of undefined (reading 'public_id')\n    at uploadMedia (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\src\\controllers\\media-controller.js:26:78)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-17T11:10:57.855Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:11:09.989Z"}
+{"level":"info","message":"Media service is running on port 3003","service":"media-service","timestamp":"2025-10-17T11:11:11.163Z"}
+{"level":"info","message":"Connected to mongodb","service":"media-service","timestamp":"2025-10-17T11:11:12.139Z"}
+{"level":"info","message":"Received POST request to /api/media/upload","service":"media-service","timestamp":"2025-10-17T11:11:17.435Z"}
+{"level":"info","message":"Request body, undefined","service":"media-service","timestamp":"2025-10-17T11:11:17.435Z"}
+{"level":"info","message":"Starting media upload","service":"media-service","timestamp":"2025-10-17T11:11:17.451Z"}
+{"level":"info","message":"File details: name=1.png, type=image/png","service":"media-service","timestamp":"2025-10-17T11:11:17.452Z"}
+{"level":"info","message":"Uploading to cloudinary starting...","service":"media-service","timestamp":"2025-10-17T11:11:17.452Z"}
+{"level":"error","message":"Error creating media Cannot read properties of undefined (reading 'public_id')","service":"media-service","stack":"TypeError: Cannot read properties of undefined (reading 'public_id')\n    at uploadMedia (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\media-service\\src\\controllers\\media-controller.js:26:78)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-17T11:11:17.453Z"}
