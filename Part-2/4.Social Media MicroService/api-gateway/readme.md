@@ -23,7 +23,5 @@ Below steps are from video (5:46:40 - )
 2. Go to "server.js"
 
 ## Tut video timestamp
-- Setup => 2:56:54 - 3:10:30 &
-- Auth-service proxy implementation in api-gateway 4:19:53 - 4:47:24 & 
-- Post-service proxy implementation in api-gateway 5:46:40 - 
+2:56:54 - 3:10:30 & 4:19:53 - 4:47:24 & 5:46:40 - 5:55:14
 

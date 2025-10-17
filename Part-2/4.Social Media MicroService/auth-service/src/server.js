@@ -80,7 +80,8 @@ const sensitiveEndPointsLimiter = rateLimit({
 app.use('/api/auth/register',sensitiveEndPointsLimiter)  // if you do multiple requests, it will be blocked
 
 // Main routes
-app.use('/api/auth',routes)    // http://localhost:3001/api/auth/register
+// Run without api-gateway => http://localhost:3001/api/auth/register
+app.use('/api/auth',routes)   
 
 // error handler
 app.use(errorHandler)

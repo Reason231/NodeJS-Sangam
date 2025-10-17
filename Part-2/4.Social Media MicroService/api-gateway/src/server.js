@@ -97,6 +97,7 @@ app.use(
 );
 
 // setting up proxy for "post-service"
+// Run => http://localhost:3000/v1/posts/create-post
 app.use(
   "/v1/posts",
   validateToken,

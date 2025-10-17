@@ -80,7 +80,7 @@ app.use('/api/posts',sensitiveEndPointsLimiter)  // if you do multiple requests,
 
 
 //routes -> pass redisClient to routes
-// Gives controller access to Redise
+// Gives controller access to Redis
 app.use(
   "/api/posts",
   (req, res, next) => {
@@ -91,6 +91,7 @@ app.use(
 );
 
 // Main routes
+// Run without api-gateway => http://localhost:3001/api/posts/create-post
 app.use('/api/posts',postRoutes)
 
 app.use(errorHandler);

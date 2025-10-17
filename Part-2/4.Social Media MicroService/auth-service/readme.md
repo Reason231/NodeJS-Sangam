@@ -27,5 +27,8 @@
 8. Go to "routes" folder and create "auth.routes.js"
 9. Go to server.js and setup all the middlewares and import routes.
 
+## Tut video 
+- 3:10:30 - 4:19:53 & 4:47:24 - 5:06:44
+
 
 
