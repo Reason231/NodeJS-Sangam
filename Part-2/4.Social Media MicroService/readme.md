@@ -85,15 +85,17 @@ Example:
  4. Go to "auth-service" folder
  - 4:47:24 - 5:06:44
 
- 5. Create post-server for CRUD
+ 5. Create "post-service" for CRUD
  - Tut video => 5:15:30 - 5:46:00 & 
 
  6. Go to "api-gateway" folder
  - 5:46:40 - 5:55:14
 
- 7. Go to "post-server"
- - 5:55:14 - 
+ 7. Go to "post-service" 
+ - 5:55:14 - 6:28:00
 
+ 8. Go to "media-service"
+ - 6:28:00 - 
 
  ## Database 
  UserName -> devilineye100_db_user

@@ -20,6 +20,10 @@
  ## Tut video 
  (Tut video => 5:15:30 - 5:46:13 & 5:55:14 -)
 
+ ## Redis Cache Showcase
+ [!Alt](./all-posts%20fetch%20postman.png)
+ - Fetch the all-posts, multiple times you can see that the response time starts to decreases, because it fetches from the redis-cache
+
 
 
 

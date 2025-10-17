@@ -2,6 +2,20 @@ const Post = require('../models/Post')
 const logger=require('../utils/logger')
 const {validateCreatePost}=require("../utils/validation")
 
+
+// It searches for all keys in Redis that match the pattern "posts:*" (which means all cached pages like posts:1:10, posts:2:10, etc.)
+// If such keys exist → it deletes them all (req.redisClient.del(keys)).
+// So, after a new post is added, Redis no longer serves old cached data — it forces the next GET request to query fresh data from MongoDB and then re-cache it.
+async function invalidatePostCache(req,input){
+    const cachedKey=`post:${input}`
+    await req.redisClient.del(cachedKey)
+
+    const keys=await req.redisClient.keys("posts:*");
+    if(keys.length > 0){
+        await req.redisClient.del(keys)
+    }
+}
+
 const createPost=async(req,res)=>{
     logger.info("Create post endpoint hit")
     try{
@@ -16,8 +30,8 @@ const createPost=async(req,res)=>{
                 }
         const {content,mediaIds} = req.body
         const newlyCreatedPost=new Post({
-            // when the user is loggedIn, then they will be able to create the post.
-            // so the the authorized user has the userInfo already, so we can retrive the user data
+            // When the user is loggedIn, then they will be able to create the post.
+            // So the the authorized user has the userInfo already, so we can retrieve the user data
             // It is done by the authMiddleware.js, we get the "req.user" from it.
             User:req.user.userId,
             content,
@@ -25,6 +39,10 @@ const createPost=async(req,res)=>{
         })
 
         await newlyCreatedPost.save()
+
+        // // Whenever a new post is created, the existing cache (which contains old post data) becomes outdated.
+        // So, we must delete the old cache so that next time someone calls /api/posts, the new post appears.
+        await invalidatePostCache(req,newlyCreatedPost._id.toString())
 
         logger.info("Post created successfully",newlyCreatedPost)
         res.status(201).json({
@@ -67,7 +85,8 @@ const getAllPosts=async(req,res)=>{
             totalPosts:totalNoOfPosts
         }
 
-        // save yours posts in redis cache
+        // setex → stands for “SET with EXpiration”.
+        // It stores the value in Redis cache for a limited time (here, 300 seconds = 5 minutes)
         await req.redisClient.setex(cacheKey,300,JSON.stringify(result))
 
         res.json(result)
@@ -84,7 +103,26 @@ const getAllPosts=async(req,res)=>{
 
 const getPost=async(req,res)=>{
     try{
+        const postId=req.params.id
+        const cacheKey=`post:${postId}`
+         const cachedPost=await req.redisClient.get(cacheKey)  // req.redisClient got from "server.js"
 
+        if(cachedPost){
+            return res.json(JSON.parse(cachedPost))
+        }
+
+        const singlePostDetailsbyId=await Post.findById(postId)
+
+        if(!singlePostDetailsbyId){
+            return res.status(404).json({
+                message:"Post not found",
+                success:false
+            })
+        }
+
+        await req.redisClient.setex(cachedPost,3600,JSON.stringify(singlePostDetailsbyId))
+
+        res.json(singlePostDetailsbyId)
     }
     catch(e){
         logger.error("Error fetching post by ID",e)
@@ -97,7 +135,24 @@ const getPost=async(req,res)=>{
 
 const deletePost=async(req,res)=>{
     try{
+        const post=await Post.findOneAndDelete({
+            _id:req.params.id,
+            User:req.user.userId
+        })
 
+          if(!post){
+            return res.status(404).json({
+                message:"Post not found",
+                success:false
+            })
+        }
+
+        // delete the cache data, after deleting a post, so that new data can be fetched
+        await invalidatePostCache(req,req.params.id)
+        res.json({
+            message:"Post deleted successfully",
+            success:true
+        })
     }
     catch(e){
         logger.error("Error deleting post",e)
@@ -108,4 +163,4 @@ const deletePost=async(req,res)=>{
     }
 }
 
-module.exports={createPost,getAllPosts}
+module.exports={createPost,getAllPosts,getPost,deletePost}
