@@ -522,3 +522,5 @@
 {"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-10-17T05:12:53.866Z"}
 {"level":"info","message":"Received GET request to /api/posts/all-posts","service":"post-service","timestamp":"2025-10-17T05:12:56.997Z"}
 {"level":"info","message":"Request body, [object Object]","service":"post-service","timestamp":"2025-10-17T05:12:56.997Z"}
+{"level":"info","message":"Post service running on port 3002","service":"post-service","timestamp":"2025-10-17T10:31:58.359Z"}
+{"level":"info","message":"Connected to mongodb","service":"post-service","timestamp":"2025-10-17T10:31:59.429Z"}

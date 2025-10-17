@@ -316,3 +316,23 @@
 {"level":"info","message":"Received GET request to /v1/posts/all-posts","service":"api-gateway","timestamp":"2025-10-17T05:12:56.993Z"}
 {"level":"info","message":"Request body, undefined","service":"api-gateway","timestamp":"2025-10-17T05:12:56.994Z"}
 {"level":"info","message":"Response received from Post service:200","service":"api-gateway","timestamp":"2025-10-17T05:12:56.999Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"api-gateway","timestamp":"2025-10-17T10:32:06.312Z"}
+{"level":"info","message":"Auth Service is running on port http://localhost:3001","service":"api-gateway","timestamp":"2025-10-17T10:32:06.315Z"}
+{"level":"info","message":"Post Service is running on port http://localhost:3002","service":"api-gateway","timestamp":"2025-10-17T10:32:06.316Z"}
+{"level":"info","message":"Redis Url is running on port redis://localhost:6379","service":"api-gateway","timestamp":"2025-10-17T10:32:06.316Z"}
+{"level":"info","message":"API Gateway is running on port 3000","service":"api-gateway","timestamp":"2025-10-17T10:50:39.143Z"}
+{"level":"info","message":"Auth Service is running on port http://localhost:3001","service":"api-gateway","timestamp":"2025-10-17T10:50:39.145Z"}
+{"level":"info","message":"Post Service is running on port http://localhost:3002","service":"api-gateway","timestamp":"2025-10-17T10:50:39.146Z"}
+{"level":"info","message":"Redis Url is running on port redis://localhost:6379","service":"api-gateway","timestamp":"2025-10-17T10:50:39.146Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"api-gateway","timestamp":"2025-10-17T10:50:42.803Z"}
+{"level":"info","message":"Request body, undefined","service":"api-gateway","timestamp":"2025-10-17T10:50:42.803Z"}
+{"level":"warn","message":"Invalid token","service":"api-gateway","timestamp":"2025-10-17T10:50:42.806Z"}
+{"level":"info","message":"Received POST request to /v1/auth/login","service":"api-gateway","timestamp":"2025-10-17T10:50:49.677Z"}
+{"level":"info","message":"Request body, [object Object]","service":"api-gateway","timestamp":"2025-10-17T10:50:49.677Z"}
+{"level":"info","message":"Response received from Auth service:200","service":"api-gateway","timestamp":"2025-10-17T10:50:50.026Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"api-gateway","timestamp":"2025-10-17T10:51:13.221Z"}
+{"level":"info","message":"Request body, undefined","service":"api-gateway","timestamp":"2025-10-17T10:51:13.221Z"}
+{"level":"error","message":"Cannot read properties of undefined (reading 'startsWith')","name":"TypeError","originalUrl":"/v1/media/upload","service":"api-gateway","stack":"TypeError: Cannot read properties of undefined (reading 'startsWith')\n    at proxyReqOptDecorator (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\api-gateway\\src\\server.js:128:43)\n    at decorateProxyReqOpt (C:\\Users\\HP\\OneDrive\\Documents\\Coding\\NodeJS\\NodeJS_Sangam Mukherjee\\Part-2\\4.Social Media MicroService\\api-gateway\\node_modules\\express-http-proxy\\app\\steps\\decorateProxyReqOpts.js:13:14)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2025-10-17T10:51:13.222Z"}
+{"level":"info","message":"Received POST request to /v1/media/upload","service":"api-gateway","timestamp":"2025-10-17T10:56:10.471Z"}
+{"level":"info","message":"Request body, undefined","service":"api-gateway","timestamp":"2025-10-17T10:56:10.472Z"}
+{"code":"ECONNREFUSED","level":"error","message":"","name":"AggregateError","originalUrl":"/v1/media/upload","service":"api-gateway","stack":"AggregateError [ECONNREFUSED]: \n    at internalConnectMultiple (node:net:1139:18)\n    at afterConnectMultiple (node:net:1712:7)","timestamp":"2025-10-17T10:56:10.476Z"}
