@@ -98,11 +98,17 @@ Example:
  - 6:28:00 - 7:00:46
 
  9. Go to "api-gateway" folder for the proxy configuration of "media-server" in server.js file
+- 7:00:46 - 7:05:00
+
+10. Go to "media service"
+- 7:05:00 - 7:16:19
+
+11. RabbitMQ
+Check the "RabbitMQ.md" file
+- 7:16:19 - 
 
  ## Database 
  UserName -> devilineye100_db_user
  Password -> shAoPhh2zzkQ9lyR
  Connection URL -> mongodb+srv://devilineye100_db_user:shAoPhh2zzkQ9lyR@microservice.hs2ssev.mongodb.net/
 
-
-6:11:04

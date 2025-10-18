@@ -18,7 +18,7 @@
 8. Go to "api-gateway" folder and go to "server.js" and "middleware"
 
  ## Tut video 
- (Tut video => 6:28:00 -)
+ (Tut video => 6:28:00 - 7:16:19)
 
  ## Need to setup header in postman for uploading image
  [!Alt](./1.png)

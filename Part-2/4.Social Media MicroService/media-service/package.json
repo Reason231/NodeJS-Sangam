@@ -13,6 +13,7 @@
   "description": "1. Open the terminal of this folder\r 2. Run \"npm init -y\" \r 3. Install the npm packages which is needed for this folder \r => npm i nodemon --save-dev\r => npm i cors dotenv express mongoose helmet jsonwebtoken winston ioredis express-rate-limit rate-limiter-flexible rate-limit-redis joi\r 4. Go to \"package.json\" for the modification.",
   "dependencies": {
     "accepts": "^2.0.0",
+    "amqplib": "^0.10.9",
     "body-parser": "^2.2.0",
     "bytes": "^3.1.2",
     "call-bind-apply-helpers": "^1.0.2",

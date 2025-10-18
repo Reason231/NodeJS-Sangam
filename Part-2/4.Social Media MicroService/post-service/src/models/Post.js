@@ -10,6 +10,7 @@ const postSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    // After creating the media-service, and adding a image, we will get the mediaId, then we can put it here
     mediaIds:[
         {
             type:String

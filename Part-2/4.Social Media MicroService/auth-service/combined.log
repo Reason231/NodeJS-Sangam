@@ -201,3 +201,10 @@
 {"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-10-17T10:50:49.708Z"}
 {"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-17T10:50:49.708Z"}
 {"level":"info","message":"Login endpoint hit....","service":"auth-service","timestamp":"2025-10-17T10:50:49.713Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-17T16:15:41.145Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-17T16:15:42.127Z"}
+{"level":"info","message":"Received POST request to /api/auth/login","service":"auth-service","timestamp":"2025-10-17T16:15:59.681Z"}
+{"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-17T16:15:59.682Z"}
+{"level":"info","message":"Login endpoint hit....","service":"auth-service","timestamp":"2025-10-17T16:15:59.689Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-17T17:10:53.326Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-17T17:10:54.305Z"}
