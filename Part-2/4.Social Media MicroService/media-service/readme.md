@@ -3,7 +3,7 @@
 2. Run "npm init -y" 
 3. Install the npm packages which is needed for this folder 
 => npm i nodemon --save-dev
-=> npm i cloudinary multer mongoose express cors helmet winston rate-limiter-flexible ioredis express-rate-limit rate-limit-redis
+=> npm i cloudinary multer mongoose express cors helmet winston rate-limiter-flexible ioredis express-rate-limit rate-limit-redis amqplib
 4. Go to "package.json" for the modification.
 
 

@@ -21,6 +21,5 @@ router.post(
 );
 
 router.get("/get", authenticateRequest, getAllMedias);
-router.delete("/:id",authenticateRequest,deleteImageController)
 
 module.exports = router;

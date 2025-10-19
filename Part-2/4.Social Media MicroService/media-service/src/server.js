@@ -10,6 +10,8 @@ const Redis=require('ioredis')
 const {rateLimit}=require("express-rate-limit")
 const {RedisStore} = require('rate-limit-redis')
 const logger = require("./utils/logger");
+const { connectToRabbitMQ, consumeEvent } = require("./utils/rabbitmq");
+const { handlePostDeleted } = require("./eventHandlers/media-event-handlers");
 // const { connectToRabbitMQ, consumeEvent } = require("./utils/rabbitmq");
 // const { handlePostDeleted } = require("./eventHandlers/media-event-handlers");
 
@@ -77,6 +79,25 @@ app.use("/api/media",mediaRoutes)
 
 app.use(errorHandler)
 
+// ## Rabbit MQ
+async function startServer(){
+  try{
+    await connectToRabbitMQ()
+
+    // consume all the events created by post-service
+    await consumeEvent('post-deleted',handlePostDeleted)
+
+    app.listen(PORT,()=>{
+        logger.info(`Media service running on port ${PORT}`)
+    })
+  }
+  catch(e){
+    logger.error(`Failed to connect to server`,e)
+    process.exit(1)
+  }
+}
+
+startServer()
 
 app.listen(PORT,()=>{
     logger.info(`Media service is running on port ${PORT}`)

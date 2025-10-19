@@ -103,9 +103,12 @@ Example:
 10. Go to "media service"
 - 7:05:00 - 7:16:19
 
-11. RabbitMQ
+11. RabbitMQ for deleting the "post" and "teai post ko image" at the same time
 Check the "RabbitMQ.md" file
-- 7:16:19 - 
+- 7:16:19 - 8:05:00
+
+12. Go to "search-service"
+- 8:05:27 - 
 
  ## Database 
  UserName -> devilineye100_db_user

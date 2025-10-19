@@ -4,7 +4,7 @@
 2. Run "npm init -y" 
 3. Install the npm packages which is needed for this folder 
 => npm i nodemon --save-dev
-=> npm i cors dotenv express mongoose helmet jsonwebtoken winston ioredis express-rate-limit rate-limiter-flexible rate-limit-redis joi
+=> npm i cors dotenv express mongoose helmet jsonwebtoken winston ioredis express-rate-limit rate-limiter-flexible rate-limit-redis joi amqplib
 4. Go to "package.json" for the modification.
 
 

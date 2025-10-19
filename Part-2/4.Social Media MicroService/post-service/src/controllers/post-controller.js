@@ -1,5 +1,6 @@
 const Post = require('../models/Post')
 const logger=require('../utils/logger')
+const { publishEvent } = require('../utils/rabbitmq')
 const {validateCreatePost}=require("../utils/validation")
 
 
@@ -147,8 +148,18 @@ const deletePost=async(req,res)=>{
             })
         }
 
+        // RabbitMQ -> publish post for delete method
+        // It will be consumed by "media-service"
+        // "post-deleted" is the routing key which is required for consume in the media-service
+        await publishEvent('post-deleted',{
+            postId:post._id.toString(),
+            userId:req.user.userId,
+            mediaIds:post.mediaIds
+        })
+
         // delete the cache data, after deleting a post, so that new data can be fetched
         await invalidatePostCache(req,req.params.id)
+
         res.json({
             message:"Post deleted successfully",
             success:true
