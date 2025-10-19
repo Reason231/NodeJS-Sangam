@@ -11,7 +11,7 @@
 4. harry.zip
 
 // This => (creating a folder based on extension)=> 
-1. jpg(folder name)/name.png
+1. jpg(folder name)/name.jpg
 2. png/name.png
 3. pdf/this.pdf
 4. zip/harry.zip

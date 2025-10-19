@@ -2,8 +2,13 @@ const path=require("path")
 
 // node index.js
 
-console.log("Directory Name => ", path.dirname(__filename))
-console.log("File name => ",path.basename(__filename))
+// Accessing the directory
+console.log("Directory Name =>",__dirname)  // OR => 
+console.log("Directory Name=> ", path.dirname(__filename)) // 
+
+// Accessing file paths
+console.log("File name with directory",__filename)  
+console.log("File name only=> ",path.basename(__filename))
 console.log("File extension => ",path.extname(__filename))
 
 console.log("-----------------------------------------------------------------")
@@ -16,3 +21,6 @@ console.log("Resolved path => ",resolvedPath)
 
 const normalizePath=path.normalize("/user/.documents/..node/projects")
 console.log("Normalized Path => ",normalizePath)
+
+const breakPath=path.parse(__dirname)
+console.log("Parsed Path =>",breakPath)
