@@ -13,12 +13,17 @@ console.log("File extension => ",path.extname(__filename))
 
 console.log("-----------------------------------------------------------------")
 
+// Join the path
 const joinPath=path.join("/user","documents","node","projects")
 console.log("Joined Path => ",joinPath)
 
+
+// Create absolute path by adding "/" 
 const resolvedPath=path.resolve("user","document","node","projects")
 console.log("Resolved path => ",resolvedPath)
 
+
+// changes the sign from "/" to "\"
 const normalizePath=path.normalize("/user/.documents/..node/projects")
 console.log("Normalized Path => ",normalizePath)
 
