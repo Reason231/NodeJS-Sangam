@@ -41,7 +41,17 @@ const createPost=async(req,res)=>{
 
         await newlyCreatedPost.save()
 
-        // // Whenever a new post is created, the existing cache (which contains old post data) becomes outdated.
+        // ## RabbitMQ -> Publishing an even for the "search-service"
+        // It will be consumed by "search-service" -> rabbitMQ
+        await publishEvent('post-created',{
+            postId:newlyCreatedPost._id.toString(),
+            userId:newlyCreatedPost.User.toString(),
+            content:newlyCreatedPost.content,
+            createdAt:newlyCreatedPost.createdAt
+        })
+
+
+        // Whenever a new post is created, the existing cache (which contains old post data) becomes outdated.
         // So, we must delete the old cache so that next time someone calls /api/posts, the new post appears.
         await invalidatePostCache(req,newlyCreatedPost._id.toString())
 

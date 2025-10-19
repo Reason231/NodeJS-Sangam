@@ -19,18 +19,6 @@ async function connectToRabbitMQ() {
   }
 }
 
-async function publishEvent(routingKey, message) {
-  if (!channel) {
-    await connectToRabbitMQ();
-  }
-
-  channel.publish(
-    EXCHANGE_NAME,
-    routingKey,
-    Buffer.from(JSON.stringify(message))
-  );
-  logger.info(`Event published: ${routingKey}`);
-}
 
 
 // If one post is deleted, then the event is published from "post-service", media-service will consume it for the delete of the "post ko media"
@@ -52,4 +40,4 @@ async function consumeEvent(routingKey, callback) {
   logger.info(`Subscribed to event: ${routingKey}`);
 }
 
-module.exports = { connectToRabbitMQ, publishEvent, consumeEvent };
+module.exports = { connectToRabbitMQ, consumeEvent };

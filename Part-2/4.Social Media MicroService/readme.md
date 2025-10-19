@@ -108,7 +108,7 @@ Check the "RabbitMQ.md" file
 - 7:16:19 - 8:05:00
 
 12. Go to "search-service"
-- 8:05:27 - 
+- 8:05:27 - 8:50:15
 
  ## Database 
  UserName -> devilineye100_db_user

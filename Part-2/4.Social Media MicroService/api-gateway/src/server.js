@@ -159,10 +159,28 @@ app.use(
         `Response received from Search service: ${proxyRes.statusCode}`
       );
 
-      return proxyResData;
+      try {
+        // Ensure content-type header is forwarded and return a string body so clients (Postman/browsers)
+        // can properly render the response instead of hanging on a Buffer.
+        const contentType = (proxyRes && proxyRes.headers && proxyRes.headers['content-type']) || 'application/json';
+        if (userRes && typeof userRes.setHeader === 'function') {
+          userRes.setHeader('content-type', contentType);
+        }
+
+        if (proxyResData && Buffer.isBuffer(proxyResData)) {
+          return proxyResData.toString('utf8');
+        }
+
+        return proxyResData;
+      } catch (err) {
+        logger.error('Error in userResDecorator for search proxy', err);
+        return proxyResData;
+      }
     },
   })
 );
+
+
 
 app.use(errorHandler);
 
@@ -173,6 +191,12 @@ app.listen(PORT, () => {
   );
   logger.info(
     `Post Service is running on port ${process.env.POST_SERVICE_URL}`
+  );
+  logger.info(
+    `Media Service is running on port ${process.env.MEDIA_SERVICE_URL}`
+  );
+  logger.info(
+    `Search Service is running on port ${process.env.SEARCH_SERVICE_URL}`
   );
   logger.info(`Redis Url is running on port ${process.env.REDIS_URL}`);
 });
