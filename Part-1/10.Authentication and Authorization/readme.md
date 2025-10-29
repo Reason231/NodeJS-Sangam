@@ -1,5 +1,8 @@
 ## Installation
-- npm i express mongoose dotenv jsonwebtoken bcryptjs multer
+- npm i express mongoose dotenv jsonwebtoken bcryptjs multer joi
+
+## Note of joi package
+- I have implemented the joi functionality in the utils folder by myself
 
 ## Authentication and authorization and Change Password
 - Authentication and Authorization Part => Tut video => 04:32:35 - 06:01:12 
@@ -19,7 +22,7 @@
 
 
 ## Note of Logout Functionality
-- Since, wer are using the "bearer token" for the authorization.
+- Since, we are using the "bearer token" for the authorization.
 - We can't create logout functionality from the backend.
 - We need to do the logout functionality from the react only.
 - If we had used the "cookie" for the authorization. Logout functionality can be created like this => 

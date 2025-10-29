@@ -36,7 +36,7 @@ const registerUser=async(req,res)=>{
             })
         }
 
-        // ## Note -> rhashing password is already done in "User.js"
+        // ## Note -> hashing password is already done in "User.js"
         
         // 3. save the user to db
         user = new User({username,email,password})

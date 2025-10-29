@@ -5,7 +5,7 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true,
         unique:true,
-        trim:true  // this will remove spaces
+        trim:true
     },
     email:{
         type:String,
@@ -19,15 +19,14 @@ const userSchema=new mongoose.Schema({
         required:true
     },
     role:{
+        default:"user",
         type:String,
-        enum:["user","admin"],  // only allow "user" or "admin" roles
-        default:"user"
-    },
-   
+        enum:["user","admin"]
+    }
 },
- {
-        timestamps:true
-    })
+{
+    timestamps:true
+})
 
-module.exports=mongoose.model("User",userSchema)
-
+const User=mongoose.model("User",userSchema)
+module.exports=User

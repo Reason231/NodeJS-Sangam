@@ -1,10 +1,20 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const { validateRegistration, validateLogin } = require("../utils/validation");
 
 // ## register controller
 const registerUser = async (req, res) => {
   try {
+
+    const {error}=validateRegistration(req.body)
+    if(error){
+      return res.status(400).json({
+        success:false,
+        message:error.details[0].message
+      })
+    }
+
     // extract user info from our request body
     const { username, email, password} = req.body;
 
@@ -39,6 +49,11 @@ const registerUser = async (req, res) => {
       return res.status(201).json({
         success: true,
         message: "User registered successfully",
+         user:{
+          id:newlyCreatedUser._id,
+          username:newlyCreatedUser.username,
+          email:newlyCreatedUser.email
+        }
       });
     } else {
       return res.status(400).json({
@@ -58,6 +73,14 @@ const registerUser = async (req, res) => {
 // ## login controller
 const loginUser = async (req, res) => {
   try {
+     const {error}=validateLogin(req.body)
+    if(error){
+      return res.status(400).json({
+        success:false,
+        message:error.details[0].message
+      })
+    }
+
     const { username, email, password } = req.body;
 
     // Usually, login is done with either username OR email, not both.
@@ -65,7 +88,7 @@ const loginUser = async (req, res) => {
 
     if (!checkUser) {
       // 404 -> Not found 
-      return res.status(400).json({
+      return res.status(404).json({
         success: false,
         message: "User doesn't exists with this userName",
       });
@@ -116,7 +139,7 @@ const loginUser = async (req, res) => {
 // ## changePassword
 const changePassword = async (req, res) => {
   try {
-    const userId = req.userInfo.userId; // req.userInfo got from auth-middleware
+    const userId = req.userInfo.userId; // req.userInfo got from auth-middleware and userId from the above "token"
 
     // extract old and new password
     const { oldPassword, newPassword } = req.body;
@@ -125,7 +148,7 @@ const changePassword = async (req, res) => {
     const user = await User.findById(userId);
 
     if (!user) {
-      return res.status(400).json({
+      return res.status(404).json({
         success: false,
         message: "User not found",
       });
