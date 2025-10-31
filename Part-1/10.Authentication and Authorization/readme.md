@@ -1,3 +1,14 @@
+## Note of authorization
+- This is still not a complete one, in the part2 it has a perfect one with the useCase of cookie-authorization for frontend.
+- This folder can be used in frontend through the localStorage method 
+
+- Interviewers will be happy if you can explain tradeoffs of two authorization way:
+- 1. LocalStorage = easier, vulnerable to XSS.
+- 2. HttpOnly cookies = protected from XSS, need CSRF mitigation.
+- Best practice: HttpOnly cookies for refresh tokens + short-lived access tokens in memory.
+- For junior/front-end interviews, demonstrating understanding of XSS vs CSRF and recommending HttpOnly cookies + refresh flow is a strong answer.
+
+
 ## Installation
 - npm i express mongoose dotenv jsonwebtoken bcryptjs multer joi
 
