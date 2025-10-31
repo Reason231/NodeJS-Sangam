@@ -116,7 +116,7 @@ const loginUser = async (req, res) => {
     // 5. sends the response after all steps are completed successfully
     res.json({
       accessToken,
-      // refreshToken,    // it shouldn't be sent at production, for learning purpose you can send it
+      refreshToken,    // it shouldn't be sent at production so comment it, for learning purpose you can send it 
       userId: user._id,
     });
   } catch (error) {
