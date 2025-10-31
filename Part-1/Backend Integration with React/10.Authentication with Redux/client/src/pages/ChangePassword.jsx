@@ -1,28 +1,27 @@
 import axios from "axios";
 import { useRef } from "react";
 import api from "../utils/axios";
+import { useDispatch, useSelector } from "react-redux";
+import { changePassword } from "../store/auth-slice";
 
 export const ChangePassword = () => {
   const oldPassword = useRef("");
   const newPassword = useRef("");
+  const dispatch=useDispatch()
 
   const handleChangePassword = async (e) => {
     e.preventDefault()
 
-    const token = localStorage.getItem("token");
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/auth/change-password",
-        {
-          oldPassword: oldPassword.current.value,
-          newPassword: newPassword.current.value,
-        },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      );
-      console.log(response);
-      alert(response.data.message)
+      const formData={oldPassword:oldPassword.current.value,newPassword:newPassword.current.value}
+
+      const result=await dispatch(changePassword(formData))
+    
+      if(result.type == "/auth/change-password/fulfilled"){
+        console.log(result.payload.message)
+      } else if(result.type == "/auth/change-password/rejected"){
+        console.log(result.payload.message || "Error changing password")
+      }
     } catch (e) {
       console.log(e);
     }

@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import api from "../../utils/axios";
+import { act } from "react";
 
 const initialState = {
   // first checks if the data contains in localStorage or not
@@ -40,6 +41,22 @@ export const loginUser = createAsyncThunk(
   }
 );
 
+export const changePassword=createAsyncThunk(
+  "/auth/change-password",
+  async(formData,{rejectWithValue})=>{
+    try{
+      console.log(initialState.token)
+      const response=await api.post('/auth/change-password',formData,
+        {headers:{Authorization:`Bearer ${initialState.token}`}})
+      return response.data
+    }
+    catch(e){
+      console.log(e.response.data)
+      return rejectWithValue(e.response.data)
+    }
+  }
+)
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -60,8 +77,7 @@ const authSlice = createSlice({
         state.token = "",
           state.user = null,
           state.isAuthenticated = false;
-      });
-    builder
+      })
       .addCase(loginUser.pending, (state, action) => {
         state.isLoading = true;
       })
@@ -80,6 +96,19 @@ const authSlice = createSlice({
         state.isAuthenticated=false,
         state.user=null,
         state.token=null
+      })
+      .addCase(changePassword.pending,(state,action)=>{
+        state.isLoading=true
+      })
+      .addCase(changePassword.fulfilled,(state,action)=>{
+        state.isLoading=false,
+        state.user=action.payload.user
+
+        localStorage.removeItem("user")
+        localStorage.setItem("user",JSON.stringify(action.payload.user))
+      })
+      .addCase(changePassword.rejected,(state,action)=>{
+        state.isLoading=false
       })
   },
 });

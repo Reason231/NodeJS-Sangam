@@ -10,6 +10,8 @@ const {rateLimit}=require("express-rate-limit")
 const {RedisStore} = require('rate-limit-redis')
 const routes=require('./routes/auth.routes')
 const errorHandler=require('./middleware/errorHandler')
+const cookieParser = require('cookie-parser');
+
 
 
 const app=express()
@@ -29,6 +31,7 @@ app.use(helmet())
 app.use(configureCors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+app.use(cookieParser())  // read cookies from backend
 
 app.use((req,res,next)=>{
     logger.info(`Received ${req.method} request to ${req.url}`)
