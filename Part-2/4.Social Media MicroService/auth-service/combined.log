@@ -254,3 +254,5 @@
 {"level":"info","message":"Request body, [object Object]","service":"auth-service","timestamp":"2025-10-31T17:25:55.596Z"}
 {"level":"info","message":"Logout endpoint hit","service":"auth-service","timestamp":"2025-10-31T17:25:55.597Z"}
 {"level":"info","message":"Refresh token deleted for logout","service":"auth-service","timestamp":"2025-10-31T17:25:55.744Z"}
+{"level":"info","message":"Identity service running one port 3001","service":"auth-service","timestamp":"2025-10-31T17:27:49.601Z"}
+{"level":"info","message":"Connected to mongodb","service":"auth-service","timestamp":"2025-10-31T17:27:50.936Z"}

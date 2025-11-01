@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import api from "../utils/axios";
+import { Button } from "@/components/UI/button";
 
 export const ChangePassword = () => {
   const oldPassword = useRef("");
@@ -50,9 +51,9 @@ export const ChangePassword = () => {
           />
         </div>
 
-        <button type="submit" className="border">
+        <Button type="submit" className="border">
           Change Password
-        </button>
+        </Button>
       </form>
     </>
   );

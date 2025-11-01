@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import api from "../utils/axios"
+import { Button } from "@/components/UI/button"
 
 export const LoginPage=()=>{
     console.log("I am here")
@@ -42,7 +43,7 @@ export const LoginPage=()=>{
                     <input type="password" id="password" placeholder="Enter your password" ref={password} className="border-2"/>
                 </div>
 
-                <button type="submit" className="border">Login</button>
+                <Button type="submit" className="border">Login</Button>
             </form>
         </>
     )

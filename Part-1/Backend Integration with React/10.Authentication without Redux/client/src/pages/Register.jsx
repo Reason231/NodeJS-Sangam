@@ -1,6 +1,7 @@
 import { useRef } from "react"
 import { useNavigate } from "react-router-dom"
 import api from "../utils/axios"
+import { Button } from "../components/UI/button"
 
 export const RegisterPage=()=>{
     let userName=useRef()
@@ -42,7 +43,7 @@ export const RegisterPage=()=>{
                 <input type="password" placeholder="Enter your password" id="password" className="border-2" ref={password}/>
             </div>
             
-            <button className="border-2" type="submit">Register</button>
+            <Button className="border-2" type="submit">Register</Button>
 
         </form>
         </>
