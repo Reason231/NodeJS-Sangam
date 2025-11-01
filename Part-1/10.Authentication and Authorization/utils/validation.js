@@ -59,4 +59,20 @@ const validateLogin = (data) => {
   return schema.validate(data);
 };
 
-module.exports = { validateRegistration, validateLogin };
+const validateChangePassword=(data)=>{
+   const schema = Joi.object({
+    newPassword: Joi.string()
+      .pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)
+      .required()
+      .messages({
+        "string.empty": "New password is required.",
+        "string.pattern.base":
+          "New Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, and one number."
+      }),
+  }).unknown(true)  // data contains the "oldPassword" which we don't want to validate it so we ignore it;
+
+  return schema.validate(data);
+}
+
+
+module.exports = { validateRegistration, validateLogin,validateChangePassword };

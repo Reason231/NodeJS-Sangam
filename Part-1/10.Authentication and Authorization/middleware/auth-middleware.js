@@ -29,7 +29,6 @@ const authMiddleware = (req, res, next) => {
         .json({ success: false, message: "Server misconfiguration" });
     }
 
-    req.userInfo = decodedTokenInfo; // Now it has has,email info
 
     try {
       // decode the token || Verify token
@@ -42,11 +41,15 @@ const authMiddleware = (req, res, next) => {
       return next();
     } catch (err) {
       if (err.name === "TokenExpiredError") {
-        return res
-          .status(401)
-          .json({ success: false, message: "Token expired" });
+        return res.status(401).json({ 
+          success: false,
+           message: "Token expired" 
+        });
       }
-      return res.status(401).json({ success: false, message: "Invalid token" });
+      return res.status(401).json({ 
+        success: false, 
+        message: "Invalid token" 
+      });
     }
   } catch (e) {
     console.log("Auth Middleware error", e);

@@ -1,26 +1,29 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
-const { validateRegistration, validateLogin } = require("../utils/validation");
+const {
+  validateRegistration,
+  validateLogin,
+  validateChangePassword,
+} = require("../utils/validation");
 
 // ## register controller
 const registerUser = async (req, res) => {
   try {
-
-    const {error}=validateRegistration(req.body)
-    if(error){
+    const { error } = validateRegistration(req.body);
+    if (error) {
       return res.status(400).json({
-        success:false,
-        message:error.details[0].message
-      })
+        success: false,
+        message: error.details[0].message,
+      });
     }
 
     // extract user info from our request body
-    const { username, email, password} = req.body;
+    const { username, email, password } = req.body;
 
     // check if user is already exists in our database
     const checkExistingUser = await User.findOne({
-      $or: [{username}, {email}],
+      $or: [{ username }, { email }],
     });
     if (checkExistingUser) {
       // 409 -> conflict
@@ -49,11 +52,11 @@ const registerUser = async (req, res) => {
       return res.status(201).json({
         success: true,
         message: "User registered successfully",
-         user:{
-          id:newlyCreatedUser._id,
-          username:newlyCreatedUser.username,
-          email:newlyCreatedUser.email
-        }
+        user: {
+          id: newlyCreatedUser._id,
+          username: newlyCreatedUser.username,
+          email: newlyCreatedUser.email,
+        },
       });
     } else {
       return res.status(400).json({
@@ -73,33 +76,33 @@ const registerUser = async (req, res) => {
 // ## login controller
 const loginUser = async (req, res) => {
   try {
-     const {error}=validateLogin(req.body)
-    if(error){
+    const { error } = validateLogin(req.body);
+    if (error) {
       return res.status(400).json({
-        success:false,
-        message:error.details[0].message
-      })
+        success: false,
+        message: error.details[0].message,
+      });
     }
 
     const { username, email, password } = req.body;
 
     // Usually, login is done with either username OR email, not both.
-    const checkUser = await User.findOne({ username }) || await User.findOne({email});
+    const checkUser =
+      (await User.findOne({ username })) || (await User.findOne({ email }));
 
     if (!checkUser) {
-      // 404 -> Not found 
+      // 404 -> Not found
       return res.status(404).json({
         success: false,
         message: "User doesn't exists with this userName",
       });
     }
 
-
     // if the password is correct or not
     const isPasswordMatch = await bcrypt.compare(password, checkUser.password);
 
     if (!isPasswordMatch) {
-      // 401 -> Unauthorized user  
+      // 401 -> Unauthorized user
       return res.status(401).json({
         success: false,
         message: "Password Incorrect",
@@ -123,7 +126,7 @@ const loginUser = async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Logged in successful",
-      accessToken
+      accessToken,
     });
   } catch (e) {
     console.log(e);
@@ -133,8 +136,6 @@ const loginUser = async (req, res) => {
     });
   }
 };
-
-
 
 // ## changePassword
 const changePassword = async (req, res) => {
@@ -161,6 +162,14 @@ const changePassword = async (req, res) => {
       return res.status(401).json({
         success: false,
         message: "Old password is incorrect! Please try again",
+      });
+    }
+
+    const { error } = validateChangePassword(req.body);
+    if (error) {
+      return res.status(400).json({
+        success: false,
+        message: error.details[0].message,
       });
     }
 

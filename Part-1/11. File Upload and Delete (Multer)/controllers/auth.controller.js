@@ -1,10 +1,19 @@
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const { validateRegistration, validateLogin } = require("../utils/validation");
 
 // ## register controller
 const registerUser = async (req, res) => {
   try {
+    const {error}=validateRegistration(req.body)
+    if(error){
+      return res.status(400).json({
+        success:false,
+        message:error.details[0].message
+      })
+    }
+
     // extract user info from our request body
     const { username, email, password} = req.body;
 
@@ -57,6 +66,14 @@ const registerUser = async (req, res) => {
 // ## login controller
 const loginUser = async (req, res) => {
   try {
+    const {error}=validateLogin(req.body)
+    if(error){
+      return res.status(400).json({
+        success:false,
+        message:error.details[0].message
+      })
+    }
+
     const { username, email, password } = req.body;
 
     // Usually, login is done with either username OR email, not both.

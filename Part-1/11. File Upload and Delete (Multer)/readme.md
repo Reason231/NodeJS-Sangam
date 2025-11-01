@@ -1,5 +1,5 @@
 ## Installation
-- npm i express mongoose dotenv jsonwebtoken bcryptjs multer cloudinary
+- npm i express mongoose dotenv jsonwebtoken bcryptjs multer cloudinary joi
 
 ## File Upload and Fetching
 - Tut video => 06:02:12 - 06:47:30
@@ -11,7 +11,7 @@
 - It is used for "form-data" in the postman.
 
 
-## Steps
+## Steps of code
 1. Create "image-model.js" file
 2. Go to the cloudinary website => 
 - https://console.cloudinary.com/app/c-ce0b1deaa817fbf1c372eed9d1f226/home/dashboard
